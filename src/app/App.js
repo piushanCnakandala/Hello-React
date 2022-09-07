@@ -1,8 +1,8 @@
 import React from "react";
-import Login from "../pages/Login";
 
+import Dashboard from "../pages/dashboard/index";
 function App() {
-    return (<Login/>
+    return (<Dashboard/>
 
     );
 
