@@ -13,14 +13,19 @@ class Dashboard extends Component {
         return(
             <div className={classes.container}>
                 <div className={classes.nav_container}>
-                    <div className={classes.title_name}>
-                        <Typography variant="h3">Dashboard</Typography>
+
+                    <div className={classes.nav_left_side}>
+                        <div className={classes.title_name}>
+                            <Typography variant="h3">Dashboard</Typography>
+                        </div>
                     </div>
-                    <div className={classes.customer_button}>
-                       <StyleButton variant="contained" label="Customer"/>
-                    </div>
-                    <div className={classes.item_button}>
-                        <StyleButton variant="contained" label="Item"/>
+                    <div className={classes.nav_right_side}>
+                        <div className={classes.customer_button}>
+                            <StyleButton variant="contained" label="Customer"/>
+                        </div>
+                        <div className={classes.item_button}>
+                            <StyleButton variant="contained" label="Item"/>
+                        </div>
                     </div>
                 </div>
                 <div className={classes.main_container}></div>
