@@ -1,11 +1,13 @@
 import React from "react";
 
-import Dashboard from "../pages/dashboard";
+
 import Login from "../session/Login";
 import {Route, Routes} from "react-router-dom";
+import Customer from "../pages/customer";
 function App() {
    return(
-       <Dashboard/>
+       <Customer/>
+
       /* <Routes>
            <Route exact path='/' element={<Dashboard/>}/>
            <Route path='login' element={<Login/>}/>
