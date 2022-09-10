@@ -27,7 +27,7 @@ class Item extends Component{
 
 
                     <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField label={"Item Salary"} variant={"outlined"}/>
+                        <TextField label={" Salary"} variant={"outlined"}/>
                     </Grid>
 
 
