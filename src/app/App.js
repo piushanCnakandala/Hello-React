@@ -5,15 +5,16 @@ import Login from "../session/Login";
 import {Route, Routes} from "react-router-dom";
 import Customer from "../pages/customer";
 import Item from "../pages/item";
+import Dashboard from "../pages/dashboard";
 function App() {
    return(
-       /*<Customer/>*/
-       <Item/>
+      /* /!*<Customer/>*!/
+       <Item/>*/
 
-      /* <Routes>
+       <Routes>
            <Route exact path='/' element={<Dashboard/>}/>
            <Route path='login' element={<Login/>}/>
-       </Routes>*/
+       </Routes>
     );
 
 }
