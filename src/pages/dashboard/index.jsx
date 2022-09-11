@@ -1,8 +1,9 @@
 import React,{Component} from "react";
 import {styleSheet} from "./style";
 import {withStyles} from "@mui/styles";
-import {Typography} from "@mui/material";
+import { Typography} from "@mui/material";
 import StyleButton from "../../components/common/Button";
+import {Link} from  'react-router-dom'
 
 class Dashboard extends Component {
     constructor(props) {
@@ -21,10 +22,14 @@ class Dashboard extends Component {
                     </div>
                     <div className={classes.nav_right_side}>
                         <div className={classes.customer_button}>
-                            <StyleButton variant="contained" label="Customer"/>
+                            <Link to = "/customer">  <StyleButton variant="contained" label="Customer"/></Link>
+
                         </div>
                         <div className={classes.item_button}>
-                            <StyleButton variant="contained" label="Item"/>
+                            <Link to="/item">
+                                <StyleButton variant="contained" label="Item"/>
+                            </Link>
+
                         </div>
                     </div>
                 </div>
