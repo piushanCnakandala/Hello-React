@@ -16,30 +16,30 @@ class Customer extends Component{
             <Fragment>
                 <Grid className={classes.main_container} container spacing={0.5}>
                     <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField label={"Customer Name"} variant={"outlined"}/>
+                        <TextField  className={classes.txt_style}  label={"Customer Name"} variant={"outlined"} size={"small"}/>
                     </Grid>
 
                     <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField label={"Customer Age"} variant={"outlined"}/>
+                        <TextField className={classes.txt_style}  label={"Customer Age"} variant={"outlined"} size={"small"}/>
                     </Grid>
 
                     <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField label={"Customer Salary"} variant={"outlined"}/>
-                    </Grid>
-
-
-                    <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField label={"Customer Salary"} variant={"outlined"}/>
+                        <TextField className={classes.txt_style}  label={"Customer Salary"} variant={"outlined"} size={"small"}/>
                     </Grid>
 
 
                     <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField label={"Customer Salary"} variant={"outlined"}/>
+                        <TextField className={classes.txt_style}  label={"Customer Salary"} variant={"outlined"} size={"small"}/>
                     </Grid>
 
 
                     <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField label={"Customer Salary"} variant={"outlined"}/>
+                        <TextField className={classes.txt_style}  label={"Customer Salary"} variant={"outlined"} size={"small"}/>
+                    </Grid>
+
+
+                    <Grid item lg={6} md={6} sm={6} xm={6}>
+                        <TextField className={classes.txt_style}  label={"Customer Salary"} variant={"outlined"} size={"small"}/>
                     </Grid>
                     <StyleButton variant="contained" label="Save"/>
                     <StyleButton variant="contained" label="clear"/>

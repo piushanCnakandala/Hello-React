@@ -14,30 +14,30 @@ class Item extends Component{
             <Fragment>
                 <Grid className={classes.main_container} container spacing={0.5}>
                     <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField label={"Item Name"} variant={"outlined"}/>
+                        <TextField className={classes.txt_style} label={"Item Name"} variant={"outlined"} size={"small"}/>
                     </Grid>
 
                     <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField label={" Item QTY"} variant={"outlined"}/>
+                        <TextField  className={classes.txt_style} label={" Item QTY"} variant={"outlined"} size={"small"}/>
                     </Grid>
 
                     <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField label={"Item"} variant={"outlined"}/>
-                    </Grid>
-
-
-                    <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField label={" Salary"} variant={"outlined"}/>
+                        <TextField className={classes.txt_style}  label={"Item"} variant={"outlined"} size={"small"}/>
                     </Grid>
 
 
                     <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField label={"Customer Salary"} variant={"outlined"}/>
+                        <TextField className={classes.txt_style}  label={" Salary"} variant={"outlined"}size={"small"}/>
                     </Grid>
 
 
                     <Grid item lg={6} md={6} sm={6} xm={6}>
-                        <TextField label={"Customer Salary"} variant={"outlined"}/>
+                        <TextField className={classes.txt_style}  label={"Customer Salary"} variant={"outlined"} size={"small"}/>
+                    </Grid>
+
+
+                    <Grid item lg={6} md={6} sm={6} xm={6}>
+                        <TextField className={classes.txt_style}  label={"Customer Salary"} variant={"outlined"} size={"small"}/>
                     </Grid>
                     <StyleButton variant="contained" label="Save"/>
                     <StyleButton variant="contained" label="clear"/>
