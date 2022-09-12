@@ -33,10 +33,10 @@ class Post extends Component{
             this.state({
                 alert:true,
                 message:'post created succesfully!',
-                severity:'succcess'
+                severity:'success'
             })
         }else {
-            this.state({
+            this.setState({
                 alert:true,
                 message:'post created Unsuccesfully!',
                 severity:'error'
@@ -102,13 +102,13 @@ class Post extends Component{
                                        validators={['required']}/>
                     </Grid>
                     <Grid item lg={12} md={12} sm={12} style={{display: "flex"}} justifyContent="flex-end">
-                        <StyleButton variant="contained" label="Save" type="submit"/>
+                        <StyleButton variant="contained" label="Save" type="submit" size="small"/>
                     </Grid>
 
                 </Grid>
               </ValidatorForm>
                 <StyleSnackBar
-                    open={this.state.open}
+                    open={this.state.alert}
                     onClose={()=>{
                         this.setState({open:false})
                     }}
