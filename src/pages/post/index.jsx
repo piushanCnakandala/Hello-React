@@ -24,6 +24,26 @@ class Post extends Component{
         }
     }
 
+      async loadData(){
+        let res= await PostService.fetchPost()
+          if (res.status == 200) {
+              console.log("res :" + JSON.stringify(res.data))
+          }else {
+              console.log("fetching error :" + res)
+          }
+
+    }
+
+    componentDidMount() {
+        this.loadData();
+        console.log('post Screen Mounted!')
+    }
+/*
+    componentWillUnmount() {
+        console.log('post Screen UnMounted!')
+    }*/
+
+
     handleSubmit =async () => {
         console.log('save btn clicked')
         console.log(this.state.formData)
@@ -76,7 +96,7 @@ class Post extends Component{
                                            formData.id=e.target.value
                                            this.setState({formData})
                                        }}
-                                       validators={['required',]}/>
+                                       validators={['required']}/>
                     </Grid>
 
                     <Grid item lg={6} md={6} sm={6} xm={6}>
