@@ -6,6 +6,7 @@ import StyleButton from "../../components/common/Button";
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import PostService from "../../services/PostService";
 import StyleSnackBar from "../../components/common/SnackBar";
+import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 
 class Post extends Component{
 
@@ -20,7 +21,24 @@ class Post extends Component{
             },
             alert: false,
             message:'',
-            severity:''
+            severity:'',
+
+            //for table
+            columns: [
+            { field: 'userId', headerName: 'userId', width: 70 },
+            { field: 'id', headerName: 'id', width: 130 },
+                { field: 'title', headerName: 'title', width: 130 },
+            { field: 'body', headerName: 'body', width: 130 },
+          /*  {
+                field: 'fullName',
+                headerName: 'Full name',
+                description: 'This column has a value getter and is not sortable.',
+                sortable: false,
+                width: 160,
+                valueGetter: (params: GridValueGetterParams) =>
+                    `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+            },*/
+        ]
         }
     }
 
@@ -124,8 +142,17 @@ class Post extends Component{
                     <Grid item lg={12} md={12} sm={12} style={{display: "flex"}} justifyContent="flex-end">
                         <StyleButton variant="contained" label="Save" type="submit" size="small"/>
                     </Grid>
-
                 </Grid>
+
+                    <Grid container spacing={0.5}>
+                        <DataGrid
+                           //rows={rows}
+                            columns={this.state.columns}
+                            pageSize={5}
+                            rowsPerPageOptions={[5]}
+                            checkboxSelection
+                        />
+                    </Grid>
               </ValidatorForm>
                 <StyleSnackBar
                     open={this.state.alert}
